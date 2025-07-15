@@ -19,18 +19,17 @@ This repository documents my experiments and testing setup for scraping dynamic,
 
 ```
 playwright-js-scraping/
-├── scrape_sahibinden.py         # Main script for detail page scraping
-├── listing_urls.csv             # Input file with URLs
+├── jsheavy4.py         # Main script for detail page scraping
+├── notebook.csv             # Input file with URLs
 ├── README.md
 ├── .gitignore
 └── /screenshots (optional)      # Example output or anti-bot captures
 ```
 
----
 
 ## ⚙️ How It Works
 
-1. **Load URLs** from `listing_urls.csv`  
+1. **Load URLs** from `notebook.csv`  
 2. **Launch undetected Chrome** using `undetected_chromedriver`  
 3. **Visit each link**, wait for page to fully load (`WebDriverWait`)  
 4. **Extract details** (e.g., title, price, features)  
@@ -54,3 +53,32 @@ playwright-js-scraping/
 
 ```bash
 # Step 1: Install dependenci
+# Step 2: Run the script
+python jsheavy1-2-3-4.py
+```
+
+---
+
+## 🧠 Lessons Learned
+
+- JS-heavy sites like `sahibinden.com` require full browser rendering  
+- Cloudflare protections often block traditional scrapers → use `undetected-chromedriver`  
+- Always wait for DOM elements explicitly using `WebDriverWait`  
+- Mimicking human behavior (scrolling, waiting, random clicks) is essential
+
+---
+
+## 📸 Screenshots
+
+_Example output or UI screenshots go here (if available)._
+
+---
+
+## 📜 License
+
+MIT License – for educational and personal use only.
+
+---
+
+Built by [ekrem5995] as part of scraping + automation mastery.  
+Follow the journey. 🚀
